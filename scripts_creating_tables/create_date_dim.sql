@@ -5,14 +5,14 @@ END;
 GO
 
 CREATE TABLE date_dim(
-	date DATETIME,
+    date DATETIME,
     quarter INT,
     year INT,
     month INT,
     week INT,
     day INT,
     day_of_week INT, 
-	hour INT
+    hour INT
 )
 
 GO;
@@ -59,7 +59,7 @@ SET
     [week]          = DATEPART(WEEK, [date]),
     [day]           = DATEPART(DAY, [date]),
     [day_of_week]   = DATEPART(WEEKDAY, [date]),
-	[hour]  		= DATEPART(HOUR, [date])
+    [hour]          = DATEPART(HOUR, [date])
 ;
 GO
 
