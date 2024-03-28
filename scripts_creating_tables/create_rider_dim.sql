@@ -23,9 +23,9 @@ Select
     r.first as first,
     r.last as last,
     r.address as address,
+    Convert(Datetime, SUBSTRING(r.birthday,1,19),120) as birthday,
     Convert(Datetime, SUBSTRING(r.account_start_date,1,19),120) as account_start_date,
     Convert(Datetime, SUBSTRING(r.account_end_date,1,19),120) as account_end_date,
-    Convert(Datetime, SUBSTRING(r.birthday,1,19),120) as birthday,
     r.is_member as is_member
 From staging_rider as r
 
